@@ -3,25 +3,34 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import plotly.figure_factory as ff
+from datetime import datetime
+import seaborn as sns
+import plotly.express as px
+import plotly.io as pio
+pio.renderers.default = "browser"
 
-#all_df = pd.read_csv("C://Users//JJMerits//Documents//indicators_crawling//test_df_all.csv")
+import plotly.graph_objects as go
 
-st.title('대시보드 테스트 화면')
-st.header("제목")
-#st.subheader("소제목")
-st.write("내용을 입력합니다.")
+#sns.set_style("dark")
+test_df = pd.read_csv('C:\\Users\\NHWM\\PycharmProjects\\steamlit\\test_df_all.csv')
+name_list = test_df['Name'].unique().tolist()
+df = test_df[test_df['Name'] == name_list[4]]
+#df.sort_value
 
-#st.dataframe(all_df)
+df['date'] = df['date'].apply(lambda x: datetime.strptime(x,'%Y-%m-%d %H:%M:%S').strftime('%Y/%m'))
+df.set_index("date", inplace = True)
 
-st.header("경제지표")
-
-col1, col2 = st.columns(2)
-
-with col1:
-    st.header("A cat")
-    st.image("https://static.streamlit.io/examples/cat.jpg", use_column_width=True)
-
-with col2:
-    st.header("Chart Data")
-    chart_data = pd.DataFrame(np.random.randn(50, 3), columns=["a", "b", "c"])
-    st.bar_chart(chart_data)
+#plt.figure(figsize=(15,30))
+#plt.rc('xtick' , labelsize = 8)
+#plt.rc('ytick' , labelsize = 5)
+#df[['actual']].plot(kind = "barh")
+#
+#fig = px.bar(df[['actual']], y='actual', x=df[['actual']].index, title=name_list[4],orientation='v', labels={'actual':'actual (%)', 'date':'date'})
+#fig.show()
+st.set_page_config(layout='wide')
+fig = go.Figure()
+fig.add_trace(go.Bar(x=df[['actual']].index,y=df['actual'].to_list(),name='actual'))
+fig.add_trace(go.Bar(x=df[['actual']].index,y=df['forecast'].to_list(),name='forecast'))
+fig.update_layout(barmode='group',title=name_list[4], yaxis=dict(title = 'y/y %'))
+#fig.show()
+st.plotly_chart(fig,use_container_width=True)
