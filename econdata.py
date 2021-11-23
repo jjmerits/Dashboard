@@ -12,7 +12,10 @@ pio.renderers.default = "browser"
 import plotly.graph_objects as go
 
 #sns.set_style("dark")
-test_df = pd.read_csv('C:/Users/NHWM/PycharmProjects/steamlit/test_df_all.csv')
+url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/test_df_all.csv'
+test_df = pd.read_csv)url, index_col=0)
+
+#test_df = pd.read_csv('C:/Users/NHWM/PycharmProjects/steamlit/test_df_all.csv')
 name_list = test_df['Name'].unique().tolist()
 df = test_df[test_df['Name'] == name_list[4]]
 #df.sort_value
