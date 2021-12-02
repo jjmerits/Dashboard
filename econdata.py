@@ -54,7 +54,7 @@ df['date'] = df['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
 df.set_index("date", inplace = True)
 
 
-# plot graph
+#plot graph
 def plot_graph(x):
   df_x = df[df['event'] == x]
   fig = go.Figure()
