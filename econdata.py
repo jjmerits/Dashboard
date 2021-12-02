@@ -55,8 +55,8 @@ df.set_index("date", inplace = True)
 
 
 #plot graph
-def plot_graph(x):
-  df_x = df[df['event'] in x]
+def plot_graph(x,y=NULL):
+  df_x = df[df['event'] == x or df['event'] == y]
   fig = go.Figure()
   fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['actual'].to_list(),name='actual'))
   fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['forecast'].to_list(),name='forecast'))
@@ -67,10 +67,10 @@ def plot_graph(x):
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph({"ISM Manufacturing PMI"})
+  plot_graph("ISM Manufacturing PMI")
 
 with col2:
-  plot_graph({"ISM Non-Manufacturing PMI","ISM Services PMI"})
+  plot_graph("ISM Non-Manufacturing PMI","ISM Services PMI")
   
   
   
