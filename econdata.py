@@ -58,8 +58,9 @@ def plot_graph(x,y=""):
   #fig.show()
   st.plotly_chart(fig,use_container_width=True)
 
-col1, col2 = st.columns(2)
 st.header("US")
+col1, col2 = st.columns(2)
+
 with col1:
   plot_graph("ISM Manufacturing PMI")
 
