@@ -57,7 +57,7 @@ df.set_index("date", inplace = True)
 #plot graph
 def plot_graph(x,y=""):
   df_x = df[(df['event'] == x) | (df['event'] == y)]
-  df_x = df_x.loc[df_x[['date','actual','forecast']].drop_duplicates().index]
+  df_x[['actual']]
   fig = go.Figure()
   fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['actual'].to_list(),name='actual'))
   fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['forecast'].to_list(),name='forecast'))
