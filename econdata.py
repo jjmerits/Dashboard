@@ -1,4 +1,4 @@
-import streamlit as st
+nimport streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -54,7 +54,7 @@ df.set_index("date", inplace = True)
 
 # plot graph
 x = "Final Manufacturing PMI"
-df_x = df[df['Name'] == x]
+df_x = df[df['event'] == x]
 fig = go.Figure()
 fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['actual'].to_list(),name='actual'))
 fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['forecast'].to_list(),name='forecast'))
