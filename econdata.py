@@ -48,7 +48,7 @@ USD_list = conn.econdata.glob.find({'currency':'USD'}).distinct('event')
 cursor = conn.econdata.glob.find({'event':{"$in":USD_list},'currency':'USD'},{'_id':False})
 df =pd.DataFrame(cursor)
 
-df['date'] = df['date'].apply(lambda x: datetime.strptime(x,'%Y-%m-%d %H:%M:%S').strftime('%Y/%m'))
+df['date'] = df['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
 df.set_index("date", inplace = True)
 
 
