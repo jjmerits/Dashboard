@@ -63,8 +63,17 @@ def plot_graph(x):
   fig.update_layout(barmode='group',title=x+" "+df_x['currency'].values[1], yaxis=dict(title = ''))
   #fig.show()
   st.plotly_chart(fig,use_container_width=True)
+
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("ISM Manufacturing PMI")
+
+with col2:
+  plot_graph("ISM Non-Manufacturing PMI")
   
-plot_graph("ISM Manufacturing PMI")
+  
+  
 #st.set_page_config(layout='centered')
 st.write(df.head(5))
 
