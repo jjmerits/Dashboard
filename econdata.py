@@ -55,15 +55,16 @@ df.set_index("date", inplace = True)
 
 
 # plot graph
-x = "Final Manufacturing PMI"
-df_x = df[df['event'] == x]
-fig = go.Figure()
-fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['actual'].to_list(),name='actual'))
-fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['forecast'].to_list(),name='forecast'))
-fig.update_layout(barmode='group',title=x+" "+df_x['currency'].values[1], yaxis=dict(title = 'y/y %'))
-#fig.show()
-st.plotly_chart(fig,use_container_width=True)
-
+def plot_graph(x):
+  df_x = df[df['event'] == x]
+  fig = go.Figure()
+  fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['actual'].to_list(),name='actual'))
+  fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['forecast'].to_list(),name='forecast'))
+  fig.update_layout(barmode='group',title=x+" "+df_x['currency'].values[1], yaxis=dict(title = ''))
+  #fig.show()
+  st.plotly_chart(fig,use_container_width=True)
+  
+plot_graph("Flash Manufacturing PMI")
 #st.set_page_config(layout='centered')
 st.write(df.head(5))
 
