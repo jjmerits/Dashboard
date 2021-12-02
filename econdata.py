@@ -70,6 +70,6 @@ with col2:
   
   
 #st.set_page_config(layout='centered')
-st.write(df.head(5))
+#st.write(df.head(5))
 
 conn.close()
