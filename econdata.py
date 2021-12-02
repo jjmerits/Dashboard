@@ -12,31 +12,23 @@ pio.renderers.default = "browser"
 import plotly.graph_objects as go
 import pymongo
 
-#sns.set_style("dark")
-url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/test_df_all.csv'
-test_df = pd.read_csv(url)
+#url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/test_df_all.csv'
+#test_df = pd.read_csv(url)
 
-#test_df = pd.read_csv('C:/Users/NHWM/PycharmProjects/steamlit/test_df_all.csv')
-name_list = test_df['Name'].unique().tolist()
-df = test_df[test_df['Name'] == name_list[4]]
-#df.sort_value
+#name_list = test_df['Name'].unique().tolist()
+#df = test_df[test_df['Name'] == name_list[4]]
 
-df['date'] = df['date'].apply(lambda x: datetime.strptime(x,'%Y-%m-%d %H:%M:%S').strftime('%Y/%m'))
-df.set_index("date", inplace = True)
 
-#plt.figure(figsize=(15,30))
-#plt.rc('xtick' , labelsize = 8)
-#plt.rc('ytick' , labelsize = 5)
-#df[['actual']].plot(kind = "barh")
-#
-#fig = px.bar(df[['actual']], y='actual', x=df[['actual']].index, title=name_list[4],orientation='v', labels={'actual':'actual (%)', 'date':'date'})
-#fig.show()
-st.set_page_config(layout='wide')
-fig = go.Figure()
-fig.add_trace(go.Bar(x=df[['actual']].index,y=df['actual'].to_list(),name='actual'))
-fig.add_trace(go.Bar(x=df[['actual']].index,y=df['forecast'].to_list(),name='forecast'))
-fig.update_layout(barmode='group',title=name_list[4], yaxis=dict(title = 'y/y %'))
-#fig.show()
+#df['date'] = df['date'].apply(lambda x: datetime.strptime(x,'%Y-%m-%d %H:%M:%S').strftime('%Y/%m'))
+#df.set_index("date", inplace = True)
+
+
+#st.set_page_config(layout='wide')
+#fig = go.Figure()
+#fig.add_trace(go.Bar(x=df[['actual']].index,y=df['actual'].to_list(),name='actual'))
+#fig.add_trace(go.Bar(x=df[['actual']].index,y=df['forecast'].to_list(),name='forecast'))
+#fig.update_layout(barmode='group',title=name_list[4], yaxis=dict(title = 'y/y %'))
+
 st.plotly_chart(fig,use_container_width=True)
 
 # Initialize connection.
@@ -67,7 +59,7 @@ def plot_graph(x,y=""):
   st.plotly_chart(fig,use_container_width=True)
 
 col1, col2 = st.columns(2)
-
+st.header("US")
 with col1:
   plot_graph("ISM Manufacturing PMI")
 
