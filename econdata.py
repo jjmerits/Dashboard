@@ -70,7 +70,7 @@ with col1:
   plot_graph("ISM Manufacturing PMI")
 
 with col2:
-  plot_graph("ISM Non-Manufacturing PMI")
+  plot_graph("ISM Services PMI")
   
   
   
