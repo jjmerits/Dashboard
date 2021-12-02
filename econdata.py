@@ -48,6 +48,20 @@ USD_list = conn.econdata.glob.find({'currency':'USD'}).distinct('event')
 cursor = conn.econdata.glob.find({'event':{"$in":USD_list},'currency':'USD'},{'_id':False})
 df =pd.DataFrame(cursor)
 
+df['date'] = df['date'].apply(lambda x: datetime.strptime(x,'%Y-%m-%d %H:%M:%S').strftime('%Y/%m'))
+df.set_index("date", inplace = True)
+
+
+# plot graph
+x = "Final Manufacturing PMI"
+df_x = df[df['Name'] == x]
+fig = go.Figure()
+fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['actual'].to_list(),name='actual'))
+fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['forecast'].to_list(),name='forecast'))
+fig.update_layout(barmode='group',title=x, yaxis=dict(title = 'y/y %'))
+#fig.show()
+st.plotly_chart(fig,use_container_width=True)
+
 #st.set_page_config(layout='centered')
 st.write(df.head(5))
 
