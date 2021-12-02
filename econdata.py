@@ -23,13 +23,13 @@ import pymongo
 #df.set_index("date", inplace = True)
 
 
-#st.set_page_config(layout='wide')
+st.set_page_config(layout='wide')
 #fig = go.Figure()
 #fig.add_trace(go.Bar(x=df[['actual']].index,y=df['actual'].to_list(),name='actual'))
 #fig.add_trace(go.Bar(x=df[['actual']].index,y=df['forecast'].to_list(),name='forecast'))
 #fig.update_layout(barmode='group',title=name_list[4], yaxis=dict(title = 'y/y %'))
 
-st.plotly_chart(fig,use_container_width=True)
+#st.plotly_chart(fig,use_container_width=True)
 
 # Initialize connection.
 conn = pymongo.MongoClient(st.secrets.db_credentials.HOST,st.secrets.db_credentials.PORT, username=st.secrets.db_credentials.DB_USER,password=st.secrets.db_credentials.DB_TOKEN, tls=True, tlsAllowInvalidCertificates=True)
