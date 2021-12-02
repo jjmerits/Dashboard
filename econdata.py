@@ -48,7 +48,7 @@ USD_list = conn.econdata.glob.find({'currency':'USD'}).distinct('event')
 cursor = conn.econdata.glob.find({'event':{"$in":USD_list},'currency':'USD'},{'_id':False})
 df =pd.DataFrame(cursor)
 
-st.set_page_config(layout='centered')
+#st.set_page_config(layout='centered')
 st.write(df.head(5))
 
 conn.close()
