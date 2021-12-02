@@ -55,7 +55,7 @@ df.set_index("date", inplace = True)
 
 
 #plot graph
-def plot_graph(x,y=NULL):
+def plot_graph(x,y=""):
   df_x = df[df['event'] == x or df['event'] == y]
   fig = go.Figure()
   fig.add_trace(go.Bar(x=df_x[['actual']].index,y=df_x['actual'].to_list(),name='actual'))
