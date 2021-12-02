@@ -67,7 +67,7 @@ with col1:
 
 with col2:
   plot_graph("ISM Non-Manufacturing PMI","ISM Services PMI")
-
+##########################
 col1, col2 = st.columns(2)
 
 with col1:
@@ -75,6 +75,14 @@ with col1:
 
 with col2:
   plot_graph("Non-Farm Employment Change")
+##########################  
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("Core PPI m/m")
+
+with col2:
+  plot_graph("Core CPI m/m")
   
   
 #st.set_page_config(layout='centered')
