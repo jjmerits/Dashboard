@@ -58,7 +58,7 @@ df['date'] = df['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
 def plot_graph(x,y=""):
   df_x = df[(df['event'] == x) | (df['event'] == y)]
   df_x = df_x.loc[df_x[['date','actual','forecast']].drop_duplicates().index]
-  df.set_index("date", inplace = True)
+  df_x.set_index("date", inplace = True)
   fig = go.Figure()
   fig.add_trace(go.Bar(x=df[['actual']].index,y=df_x['actual'].to_list(),name='actual'))
   fig.add_trace(go.Bar(x=df[['actual']].index,y=df_x['forecast'].to_list(),name='forecast'))
