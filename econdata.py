@@ -37,3 +37,16 @@ fig.add_trace(go.Bar(x=df[['actual']].index,y=df['forecast'].to_list(),name='for
 fig.update_layout(barmode='group',title=name_list[4], yaxis=dict(title = 'y/y %'))
 #fig.show()
 st.plotly_chart(fig,use_container_width=True)
+
+# Initialize connection.
+conn = pymongo.MongoClient(st.secrets.db_credentials.HOST,st.secrets.db_credentials.PORT, username=st.secrets.db_credentials.DB_USER,password=st.secrets.db_credentials.DB_TOKEN, tls=True, tlsAllowInvalidCertificates=True)
+
+# Pull data from the collection.
+# Uses st.cache to only rerun when the query changes or after 10 min.
+USD_list = conn.econdata.glob.find({'currency':'USD'}).distinct('event')
+cursor = conn.econdata.glob.find({'event':{"$in":USD_list},'currency':'USD'},{'_id':False})
+df =pd.DataFrame(cursor)
+
+st.write(df.head(5))
+
+conn.close()
