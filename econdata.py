@@ -64,7 +64,7 @@ def plot_graph(x):
   #fig.show()
   st.plotly_chart(fig,use_container_width=True)
   
-plot_graph("Flash Manufacturing PMI")
+plot_graph("ISM Manufacturing PMI")
 #st.set_page_config(layout='centered')
 st.write(df.head(5))
 
