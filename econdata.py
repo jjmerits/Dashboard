@@ -94,7 +94,7 @@ df = df.loc[df['date'].between('2017-01-01','2100-12-31', inclusive=False)]
 
 df['date'] = df['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
 
-st.header("CNY")
+st.header("China")
 col1, col2 = st.columns(2)
 
 with col1:
