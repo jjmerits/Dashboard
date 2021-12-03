@@ -127,7 +127,7 @@ with col1:
   plot_graph("Core PPI m/m")
 
 with col2:
-  plot_graph("Core CPI m/m")
+  plot_graph("Core CPI PPI m/m")
 ##########################  
 st.write("Europe")
 df = df_all[df_all['currency'] == 'EUR']
@@ -138,6 +138,27 @@ with col1:
 
 with col2:
   plot_graph("Consumer Confidence")
+  
+##########################    
+st.write("UK")
+df = df_all[df_all['currency'] == 'GBP']
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("Core CPI y/y")
+
+with col2:
+  plot_graph("Consumer Inflation Expectations")
+  
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("PPI Input m/m")
+
+with col2:
+  plot_graph("PPI Output m/m")
+    
+
 ##########################  
 st.write("China")
 df = df_all[df_all['currency'] == 'CNY']
