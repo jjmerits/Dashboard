@@ -110,7 +110,7 @@ with col1:
   plot_graph("PPI y/y")
 
 with col2:
-  plot_graph("Trade Balance")
+  plot_graph("Caixin Flash Manufacturing PMI")
 
 #st.set_page_config(layout='centered')
 #st.write(df.head(5))
