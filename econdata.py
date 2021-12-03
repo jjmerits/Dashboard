@@ -113,6 +113,11 @@ with col2:
   plot_graph("CPI y/y")
   
 ##########################
+# Pull data from the collection.
+# Uses st.cache to only rerun when the query changes or after 10 min.
+EUR_list = conn.econdata.glob.find({'currency':'EUR'}).distinct('event')
+EUR_cursor = conn.econdata.glob.find({'event':{"$in":EUR_list},'currency':'EUR'},{'_id':False})
+df =pd.DataFrame(EUR_cursor)
 st.header("Europe")
 col1, col2 = st.columns(2)
 
