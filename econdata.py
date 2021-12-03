@@ -70,7 +70,6 @@ with col1:
 
 with col2:
   plot_graph("ISM Non-Manufacturing PMI","ISM Services PMI")
-  plot_graph("Industrial Production y/y")
 ##########################    
 st.write("China")
 df = df_all[df_all['currency'] == 'CNY']
