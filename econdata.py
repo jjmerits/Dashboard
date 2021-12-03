@@ -71,6 +71,30 @@ with col1:
 with col2:
   plot_graph("ISM Non-Manufacturing PMI","ISM Services PMI")
 ##########################    
+
+st.write("Europe")
+df = df_all[df_all['currency'] == 'EUR']
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("Flash Manufacturing PMI")
+
+with col2:
+  plot_graph("Flash Services PMI")
+  
+##########################  
+
+st.write("UK")
+df = df_all[df_all['currency'] == 'GBP']
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("Flash Manufacturing PMI")
+
+with col2:
+  plot_graph("Flash Services PMI")
+  
+##########################  
 st.write("China")
 df = df_all[df_all['currency'] == 'CNY']
 
@@ -81,18 +105,9 @@ with col1:
 
 with col2:
   plot_graph("Industrial Production y/y")
-##########################  
-st.write("Europe")
-df = df_all[df_all['currency'] == 'EUR']
-col1, col2 = st.columns(2)
 
-with col1:
-  plot_graph("Flash Manufacturing PMI")
-
-with col2:
-  plot_graph("Flash Services PMI")
   ##########################  
-st.write("Aussie")
+st.write("Aus")
 df = df_all[df_all['currency'] == 'AUD']
 col1, col2 = st.columns(2)
 
@@ -114,6 +129,16 @@ with col1:
 with col2:
   plot_graph("Core CPI m/m")
 ##########################  
+st.write("Europe")
+df = df_all[df_all['currency'] == 'EUR']
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("CPI Flash Estimate y/y")
+
+with col2:
+  plot_graph("Consumer Confidence")
+##########################  
 st.write("China")
 df = df_all[df_all['currency'] == 'CNY']
 
@@ -125,17 +150,8 @@ with col1:
 with col2:
   plot_graph("CPI y/y") 
 ##########################  
-st.write("Europe")
-df = df_all[df_all['currency'] == 'EUR']
-col1, col2 = st.columns(2)
 
-with col1:
-  plot_graph("CPI Flash Estimate y/y")
-
-with col2:
-  plot_graph("Consumer Confidence")
-  ##########################  
-st.write("Aussie")
+st.write("Aus")
 df = df_all[df_all['currency'] == 'AUD']
 col1, col2 = st.columns(2)
 
