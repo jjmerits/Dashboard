@@ -83,8 +83,26 @@ with col1:
 
 with col2:
   plot_graph("Core CPI m/m")
-  
-  
+
+# Pull data from the collection.
+# Uses st.cache to only rerun when the query changes or after 10 min.
+CNY_list = conn.econdata.glob.find({'currency':'CNY'}).distinct('event')
+CNY_cursor = conn.econdata.glob.find({'event':{"$in":CNY_list},'currency':'CNY'},{'_id':False})
+df =pd.DataFrame(CNY_cursor)
+
+df = df.loc[df['date'].between('2017-01-01','2100-12-31', inclusive=False)]
+
+df['date'] = df['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
+
+st.header("CNY")
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("anufacturing PMI")
+
+with col2:
+  plot_graph("Industrial Production y/y")
+##########################
 #st.set_page_config(layout='centered')
 #st.write(df.head(5))
 
