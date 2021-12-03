@@ -104,9 +104,11 @@ with col1:
 with col2:
   plot_graph("Core CPI m/m")
 ##########################  
-col1, col2 = st.columns(2)
 st.write("China")
 df = df_all[df_all['currency'] == 'CNY']
+
+col1, col2 = st.columns(2)
+
 with col1:
   plot_graph("PPI y/y")
 
