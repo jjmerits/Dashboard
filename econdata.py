@@ -110,7 +110,7 @@ with col1:
   plot_graph("PPI y/y")
 
 with col2:
-  plot_graph("M2 Money Supply y/y")
+  plot_graph("Trade Balance")
 
 #st.set_page_config(layout='centered')
 #st.write(df.head(5))
