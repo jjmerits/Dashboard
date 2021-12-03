@@ -142,10 +142,10 @@ with col2:
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph("Italian Flash Manufacturing PMI")
+  plot_graph("Spanish Flash Manufacturing PMI")
 
 with col2:
-  plot_graph("Italian Flash Services PMI")
+  plot_graph("Spanish Flash Services PMI")
       
 #st.set_page_config(layout='centered')
 #st.write(df.head(5))
