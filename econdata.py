@@ -91,6 +91,16 @@ with col1:
 
 with col2:
   plot_graph("Flash Services PMI")
+  ##########################  
+st.write("Aussie")
+df = df_all[df_all['currency'] == 'AUD']
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("Flash Manufacturing PMI")
+
+with col2:
+  plot_graph("Flash Services PMI")
 ########################################################################################
 
 st.header("CPI/PPI")
