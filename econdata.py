@@ -138,7 +138,15 @@ with col1:
 
 with col2:
   plot_graph("French Flash Services PMI")
-   
+##########################   
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("Italian Flash Manufacturing PMI")
+
+with col2:
+  plot_graph("Italian Flash Services PMI")
+      
 #st.set_page_config(layout='centered')
 #st.write(df.head(5))
 
