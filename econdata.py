@@ -111,6 +111,17 @@ with col1:
 
 with col2:
   plot_graph("CPI y/y")
+  
+##########################
+st.header("Europe")
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("German Flash Manufacturing PMI")
+
+with col2:
+  plot_graph("German Flash Services PMI")
+   
 
 #st.set_page_config(layout='centered')
 #st.write(df.head(5))
