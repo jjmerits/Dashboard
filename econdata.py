@@ -118,6 +118,10 @@ with col2:
 EUR_list = conn.econdata.glob.find({'currency':'EUR'}).distinct('event')
 EUR_cursor = conn.econdata.glob.find({'event':{"$in":EUR_list},'currency':'EUR'},{'_id':False})
 df =pd.DataFrame(EUR_cursor)
+
+df = df.loc[df['date'].between('2017-01-01','2100-12-31', inclusive=False)]
+df['date'] = df['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
+
 st.header("Europe")
 col1, col2 = st.columns(2)
 
