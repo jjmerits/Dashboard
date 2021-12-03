@@ -38,11 +38,11 @@ conn = pymongo.MongoClient(st.secrets.db_credentials.HOST,st.secrets.db_credenti
 # Uses st.cache to only rerun when the query changes or after 10 min.
 event_list = conn.econdata.glob.find({}).distinct('event')
 cursor = conn.econdata.glob.find({'event':{"$in":event_list}},{'_id':False})
-df =pd.DataFrame(cursor)
+df_all=pd.DataFrame(cursor)
 
-df = df.loc[df['date'].between('2017-01-01','2100-12-31', inclusive=False)]
+df_all = df.loc[df['date'].between('2017-01-01','2100-12-31', inclusive=False)]
 
-df['date'] = df['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
+df_all['date'] = df_all['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
 #df.set_index("date", inplace = True)
 
 
@@ -61,7 +61,7 @@ def plot_graph(x,y=""):
 
 st.header("PMI")
 st.write("US")
-df[df['currency'] == 'USD']
+df = df_all[df_all['currency'] == 'USD']
 
 col1, col2 = st.columns(2)
 
@@ -73,7 +73,7 @@ with col2:
   plot_graph("Industrial Production y/y")
 ##########################    
 st.write("China")
-df[df['currency'] == 'CNY']
+df = df_all[df_all['currency'] == 'CNY']
 
 col1, col2 = st.columns(2)
 
@@ -84,7 +84,7 @@ with col2:
   plot_graph("Industrial Production y/y")
 ##########################  
 st.write("Europe")
-df[df['currency'] == 'EUR']
+df = df_all[df_all['currency'] == 'EUR']
 col1, col2 = st.columns(2)
 
 with col1:
@@ -96,7 +96,7 @@ with col2:
 
 st.header("CPI/PPI")
 st.write("US")
-df[df['currency'] == 'USD']
+df = df_all[df_all['currency'] == 'USD']
 col1, col2 = st.columns(2)
 
 with col1:
@@ -107,7 +107,7 @@ with col2:
 ##########################  
 col1, col2 = st.columns(2)
 st.write("China")
-df[df['currency'] == 'CNY']
+df = df_all[df_all['currency'] == 'CNY']
 with col1:
   plot_graph("PPI y/y")
 
@@ -115,7 +115,7 @@ with col2:
   plot_graph("CPI y/y") 
 ##########################  
 st.write("Europe")
-df[df['currency'] == 'EUR']
+df = df_all[df_all['currency'] == 'EUR']
 col1, col2 = st.columns(2)
 
 with col1:
@@ -127,7 +127,7 @@ with col2:
 st.header("Retail/Consumer")
 
 st.write("US")
-df[df['currency'] == 'USD']
+df =df_all[df_all['currency'] == 'USD']
 
 col1, col2 = st.columns(2)
 
