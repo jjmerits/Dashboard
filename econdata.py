@@ -143,7 +143,7 @@ with col1:
   plot_graph("PPI q/q")
 
 with col2:
-  plot_graph("CPI q/q")
+  plot_graph("Commodity Prices y/y")
 ###############################################################################################  
 st.header("Retail/Consumer")
 
