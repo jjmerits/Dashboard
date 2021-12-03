@@ -40,7 +40,7 @@ event_list = conn.econdata.glob.find({}).distinct('event')
 cursor = conn.econdata.glob.find({'event':{"$in":event_list}},{'_id':False})
 df_all=pd.DataFrame(cursor)
 
-df_all = df.loc[df['date'].between('2017-01-01','2100-12-31', inclusive=False)]
+df_all = df_all.loc[df_all['date'].between('2017-01-01','2100-12-31', inclusive=False)]
 
 df_all['date'] = df_all['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
 #df.set_index("date", inplace = True)
