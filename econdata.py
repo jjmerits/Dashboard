@@ -36,8 +36,8 @@ conn = pymongo.MongoClient(st.secrets.db_credentials.HOST,st.secrets.db_credenti
 
 # Pull data from the collection.
 # Uses st.cache to only rerun when the query changes or after 10 min.
-USD_list = conn.econdata.glob.find({'currency':'USD'}).distinct('event')
-cursor = conn.econdata.glob.find({'event':{"$in":USD_list},'currency':'USD'},{'_id':False})
+event_list = conn.econdata.glob.find({}).distinct('event')
+cursor = conn.econdata.glob.find({'event':{"$in":event_list}},{'_id':False})
 df =pd.DataFrame(cursor)
 
 df = df.loc[df['date'].between('2017-01-01','2100-12-31', inclusive=False)]
@@ -59,7 +59,10 @@ def plot_graph(x,y=""):
   #fig.show()
   st.plotly_chart(fig,use_container_width=True)
 
-st.header("US")
+st.header("PMI")
+st.write("US")
+df[df['currency'] == 'USD']
+
 col1, col2 = st.columns(2)
 
 with col1:
@@ -67,7 +70,65 @@ with col1:
 
 with col2:
   plot_graph("ISM Non-Manufacturing PMI","ISM Services PMI")
-##########################
+  plot_graph("Industrial Production y/y")
+##########################    
+st.write("China")
+df[df['currency'] == 'CNY']
+
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("Fixed Asset Investment ytd/y")
+
+with col2:
+  plot_graph("Industrial Production y/y")
+##########################  
+st.write("Europe")
+df[df['currency'] == 'EUR']
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("Flash Manufacturing PMI")
+
+with col2:
+  plot_graph("Flash Services PMI")
+########################################################################################
+
+st.header("CPI/PPI")
+st.write("US")
+df[df['currency'] == 'USD']
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("Core PPI m/m")
+
+with col2:
+  plot_graph("Core CPI m/m")
+##########################  
+col1, col2 = st.columns(2)
+st.write("China")
+df[df['currency'] == 'CNY']
+with col1:
+  plot_graph("PPI y/y")
+
+with col2:
+  plot_graph("CPI y/y") 
+##########################  
+st.write("Europe")
+df[df['currency'] == 'EUR']
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("CPI Flash Estimate y/y")
+
+with col2:
+  plot_graph("Consumer Confidence")
+###############################################################################################  
+st.header("Retail/Consumer")
+
+st.write("US")
+df[df['currency'] == 'USD']
+
 col1, col2 = st.columns(2)
 
 with col1:
@@ -76,68 +137,19 @@ with col1:
 with col2:
   plot_graph("Non-Farm Employment Change")
 ##########################  
-col1, col2 = st.columns(2)
 
-with col1:
-  plot_graph("Core PPI m/m")
 
-with col2:
-  plot_graph("Core CPI m/m")
 
-# Pull data from the collection.
-# Uses st.cache to only rerun when the query changes or after 10 min.
-CNY_list = conn.econdata.glob.find({'currency':'CNY'}).distinct('event')
-CNY_cursor = conn.econdata.glob.find({'event':{"$in":CNY_list},'currency':'CNY'},{'_id':False})
-df =pd.DataFrame(CNY_cursor)
 
-df = df.loc[df['date'].between('2017-01-01','2100-12-31', inclusive=False)]
-
-df['date'] = df['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
-
-st.header("China")
-col1, col2 = st.columns(2)
-
-with col1:
-  plot_graph("Fixed Asset Investment ytd/y")
-
-with col2:
-  plot_graph("Industrial Production y/y")
 ##########################
 
-col1, col2 = st.columns(2)
 
-with col1:
-  plot_graph("PPI y/y")
-
-with col2:
-  plot_graph("CPI y/y")
   
 ##########################
-# Pull data from the collection.
-# Uses st.cache to only rerun when the query changes or after 10 min.
-EUR_list = conn.econdata.glob.find({'currency':'EUR'}).distinct('event')
-EUR_cursor = conn.econdata.glob.find({'event':{"$in":EUR_list},'currency':'EUR'},{'_id':False})
-df =pd.DataFrame(EUR_cursor)
 
-df = df.loc[df['date'].between('2017-01-01','2100-12-31', inclusive=False)]
-df['date'] = df['date'].apply(lambda x: datetime.strftime(x,'%Y/%m'))
 
-st.header("Europe")
-col1, col2 = st.columns(2)
-
-with col1:
-  plot_graph("Flash Manufacturing PMI")
-
-with col2:
-  plot_graph("Flash Services PMI")
 ##########################   
-col1, col2 = st.columns(2)
 
-with col1:
-  plot_graph("CPI Flash Estimate y/y")
-
-with col2:
-  plot_graph("Consumer Confidence")
 ##########################   
 
 #st.set_page_config(layout='centered')
