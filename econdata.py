@@ -126,35 +126,20 @@ st.header("Europe")
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph("German Flash Manufacturing PMI")
+  plot_graph("Flash Manufacturing PMI")
 
 with col2:
-  plot_graph("German Flash Services PMI")
+  plot_graph("Flash Services PMI")
 ##########################   
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph("French Flash Manufacturing PMI")
+  plot_graph("Core CPI Flash Estimate y/y")
 
 with col2:
-  plot_graph("French Flash Services PMI")
+  plot_graph("ZEW Economic Sentiment")
 ##########################   
-col1, col2 = st.columns(2)
 
-with col1:
-  plot_graph("Italian Manufacturing PMI")
-
-with col2:
-  plot_graph("Italian Services PMI")
-##########################   
-col1, col2 = st.columns(2)
-
-with col1:
-  plot_graph("Spanish Manufacturing PMI")
-
-with col2:
-  plot_graph("Spanish Services PMI")
-  
 #st.set_page_config(layout='centered')
 #st.write(df.head(5))
 
