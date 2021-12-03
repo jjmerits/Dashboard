@@ -98,7 +98,7 @@ st.header("CNY")
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph("Caixin Flash Manufacturing PMI")
+  plot_graph("Fixed Asset Investment ytd/y")
 
 with col2:
   plot_graph("Industrial Production y/y")
