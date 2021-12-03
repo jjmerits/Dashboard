@@ -103,6 +103,15 @@ with col1:
 with col2:
   plot_graph("Industrial Production y/y")
 ##########################
+
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("PPI y/y")
+
+with col2:
+  plot_graph("New Loans")
+
 #st.set_page_config(layout='centered')
 #st.write(df.head(5))
 
