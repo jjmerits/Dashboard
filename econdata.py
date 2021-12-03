@@ -134,10 +134,10 @@ with col2:
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph("Core CPI Flash Estimate y/y")
+  plot_graph("CPI Flash Estimate y/y")
 
 with col2:
-  plot_graph("ZEW Economic Sentiment")
+  plot_graph("Consumer Confidence")
 ##########################   
 
 #st.set_page_config(layout='centered')
