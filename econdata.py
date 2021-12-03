@@ -98,7 +98,7 @@ st.header("CNY")
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph("anufacturing PMI")
+  plot_graph("Manufacturing PMI")
 
 with col2:
   plot_graph("Industrial Production y/y")
