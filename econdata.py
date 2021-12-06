@@ -232,7 +232,7 @@ st.markdown(t.text, unsafe_allow_html=True)
 
 ##########################   
 
-##########################   
+
 
 #st.set_page_config(layout='centered')
 #st.write(df.head(5))
