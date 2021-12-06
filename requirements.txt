@@ -6,4 +6,3 @@ plotly
 datetime
 seaborn
 pymongo
-json
