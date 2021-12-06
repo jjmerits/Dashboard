@@ -136,10 +136,10 @@ df = df_all[df_all['currency'] == 'EUR']
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph("Core CPI Flash Estimate y/y")
+  plot_graph("Final Core CPI y/y")
 
 with col2:
-  plot_graph("Final Core CPI y/y")
+  plot_graph("Final CPI y/y")
   
 ##########################    
 st.write("UK")
