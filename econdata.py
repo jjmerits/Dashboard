@@ -207,9 +207,10 @@ with col2:
 
 
 url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/0101048.txt'
-with open(url) as f:
-  json_data = json.load(f)
-  KRX_df = pd.read_json(json_data)
+#with open(url) as f:
+f = urlopen(url)
+json_data = json.load(f)
+KRX_df = pd.read_json(json_data)
 
 st.write(KRX_df)
 
