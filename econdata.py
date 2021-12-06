@@ -126,10 +126,10 @@ df = df_all[df_all['currency'] == 'USD']
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph("Core PPI m/m")
+  plot_graph("Core CPI m/m")
 
 with col2:
-  plot_graph("Core CPI m/m")
+  plot_graph("Core PPI m/m")
 ##########################  
 st.write("EU")
 df = df_all[df_all['currency'] == 'EUR']
