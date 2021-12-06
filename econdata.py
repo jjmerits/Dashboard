@@ -74,7 +74,7 @@ with col2:
   plot_graph("ISM Non-Manufacturing PMI","ISM Services PMI")
 ##########################    
 
-st.write("Europe")
+st.write("EU")
 df = df_all[df_all['currency'] == 'EUR']
 col1, col2 = st.columns(2)
 
@@ -131,7 +131,7 @@ with col1:
 with col2:
   plot_graph("Core CPI m/m")
 ##########################  
-st.write("Europe")
+st.write("EU")
 df = df_all[df_all['currency'] == 'EUR']
 col1, col2 = st.columns(2)
 
@@ -139,7 +139,7 @@ with col1:
   plot_graph("Final Core CPI y/y")
 
 with col2:
-  plot_graph("Final CPI y/y")
+  plot_graph("PPI m/m")
   
 ##########################    
 st.write("UK")
@@ -205,7 +205,17 @@ with col1:
 with col2:
   plot_graph("Non-Farm Employment Change")
 ##########################  
+st.write("EU")
+df =df_all[df_all['currency'] == 'USD']
 
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("Retail Sales m/m")
+
+with col2:
+  plot_graph("Consumer Confidence")
+##########################  
 
 url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/0101048final.HTML'
 #with open(url) as f:
