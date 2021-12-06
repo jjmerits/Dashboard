@@ -210,7 +210,7 @@ with col2:
 url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/0101048final.HTML'
 #with open(url) as f:
 t = requests.get(url,verify=False)
-st.markdown(t.text, unsafe_allow_html+True)
+st.markdown(t.text, unsafe_allow_html=True)
 
 
 ##########################
