@@ -11,6 +11,7 @@ pio.renderers.default = "browser"
 
 import plotly.graph_objects as go
 import pymongo
+import json
 
 #url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/test_df_all.csv'
 #test_df = pd.read_csv(url)
@@ -205,6 +206,12 @@ with col2:
 ##########################  
 
 
+url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/0101048.txt'
+with open(url) as f:
+  json_data = json.load(f)
+  KRX_df = pd.read_json(json_data)
+
+st.write(KRX_df)
 
 
 ##########################
