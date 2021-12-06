@@ -206,7 +206,7 @@ with col2:
   plot_graph("Non-Farm Employment Change")
 ##########################  
 st.write("EU")
-df =df_all[df_all['currency'] == 'USD']
+df =df_all[df_all['currency'] == 'EUR']
 
 col1, col2 = st.columns(2)
 
