@@ -205,6 +205,14 @@ with col1:
 with col2:
   plot_graph("Non-Farm Employment Change")
 ##########################  
+col1, col2 = st.columns(2)
+
+with col1:
+  plot_graph("CB Consumer Confidence")
+
+with col2:
+  plot_graph("Average Hourly Earnings m/m")
+##########################  
 st.write("EU")
 df =df_all[df_all['currency'] == 'EUR']
 
