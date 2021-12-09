@@ -219,7 +219,7 @@ df =df_all[df_all['currency'] == 'EUR']
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph("Retail Sales m/m")
+  plot_graph("Unemployment Rate")
 
 with col2:
   plot_graph("Consumer Confidence")
