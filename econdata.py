@@ -208,10 +208,10 @@ with col2:
 col1, col2 = st.columns(2)
 
 with col1:
-  plot_graph("CB Consumer Confidence")
+  plot_graph("Retail Sales m/m")
 
 with col2:
-  plot_graph("Average Hourly Earnings m/m")
+  plot_graph("CB Consumer Confidence")
 ##########################  
 st.write("EU")
 df =df_all[df_all['currency'] == 'EUR']
