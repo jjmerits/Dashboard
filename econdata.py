@@ -21,7 +21,7 @@ import requests
 #df = test_df[test_df['Name'] == name_list[4]]
 
 
-#df['date'] = df['date'].apply(lambda x: datetime.strptime(x,'%Y-%m-%d %H:%M:%S').strftime('%Y/%m'))
+#df['date'] = df['date'].apply(lambda x: datetime.strptime(x,'%Y-%m-%d %H:%M:%S').strftime('%Y/%m/%d'))
 #df.set_index("date", inplace = True)
 
 
