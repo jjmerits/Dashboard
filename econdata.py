@@ -228,6 +228,14 @@ with col2:
 ##########################  
 st.write("FED News Flow")
 
+def make_clickable(link):
+    # target _blank to open new window
+    # extract clickable text to display for your link
+    text = link.split('=')[1]
+    return f'<a target="_blank" href="{link}">{text}</a>'
+
+
+
 google_news = gnews.GNews()
 google_news.language = 'english'
 google_news.period = '1d'
@@ -239,6 +247,12 @@ df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x,
 
 df.sort_values('published date', inplace = True, ascending = False)
 df.drop(['description','publisher'], axis=1, inplace = True)
+
+# link is the column with hyperlinks
+df['url'] = df['url'].apply(make_clickable)
+df = df.to_html(escape=False)
+st.write(df, unsafe_allow_html=True)
+
 st.table(df)
 
 
