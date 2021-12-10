@@ -276,7 +276,7 @@ with col2:
   
   st.write(df, unsafe_allow_html=True)
 ##########################
-st.header("주별 단일판매 ")
+st.header(" ")
 url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010492021final.HTML'
 #with open(url) as f:
 t = requests.get(url,verify=False)
