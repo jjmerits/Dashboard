@@ -240,9 +240,18 @@ df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x,
 df.sort_values('published date', inplace = True, ascending = False)
 df.drop(['description','publisher'], axis=1, inplace = True)
 
-st.write(df.to_html(escape=False, index=False), unsafe_allow_html=True)
+def make_clickable(link):
+    # target _blank to open new window
+    # extract clickable text to display for your link
+    text = link.split('=')
+    return f'<a target="_blank" href="{link}">{text}</a>'
 
-st.table(df)
+
+# link is the column with hyperlinks
+df['url'] = df['url'].apply(make_clickable)
+df = df.to_html(escape=False)
+
+st.table(df,unsafe_allow_html=True)
 
 
 
