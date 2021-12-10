@@ -251,7 +251,7 @@ def make_clickable(link):
 df['url'] = df['url'].apply(make_clickable)
 df = df.to_html(escape=False)
 
-st.table(df,unsafe_allow_html=True)
+st.write(df, unsafe_allow_html=True)
 
 
 
