@@ -241,7 +241,7 @@ st.markdown(t.text, unsafe_allow_html=True)
   
 ##########################
 
-google_news = GNews()
+google_news = gnews.GNews()
 google_news.language = 'english'
 google_news.period = '1d'
 google_news.results = 10000
