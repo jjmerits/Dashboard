@@ -226,19 +226,6 @@ with col1:
 with col2:
   plot_graph("Consumer Confidence")
 ##########################  
-
-url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010492021final.HTML'
-#with open(url) as f:
-t = requests.get(url,verify=False)
-st.markdown(t.text, unsafe_allow_html=True)
-
-
-##########################
-
-
-  
-##########################
-
 google_news = gnews.GNews()
 google_news.language = 'english'
 google_news.period = '1d'
@@ -251,6 +238,19 @@ df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x,
 df.sort_values('published date', inplace = True, ascending = False)
 df.drop(['description'], axis=1, inplace = True)
 st.write(df)
+
+
+
+##########################
+
+url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010492021final.HTML'
+#with open(url) as f:
+t = requests.get(url,verify=False)
+st.markdown(t.text, unsafe_allow_html=True)
+  
+##########################
+
+
 ##########################   
 
 
