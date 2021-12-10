@@ -230,7 +230,7 @@ st.write("FED News Flow")
 
 google_news = gnews.GNews()
 google_news.language = 'english'
-google_news.period = '1d'
+google_news.period = '24h'
 google_news.results = 10000
 df = google_news.get_news('FED')
 df = pd.DataFrame.from_records(df)
