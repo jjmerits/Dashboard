@@ -6,4 +6,4 @@ plotly
 datetime
 seaborn
 pymongo
-GNews
+gnews
