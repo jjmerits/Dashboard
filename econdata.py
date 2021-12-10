@@ -14,9 +14,7 @@ import pymongo
 import json
 import requests
 
-from gnews import GNews
-import pandas as pd
-from datetime import datetime
+import gnews
 
 #url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/test_df_all.csv'
 #test_df = pd.read_csv(url)
