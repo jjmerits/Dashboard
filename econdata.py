@@ -250,7 +250,7 @@ df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x,
 
 df.sort_values('published date', inplace = True, ascending = False)
 df.drop(['description'], axis=1, inplace = True)
-st.writ(df)
+st.write(df)
 ##########################   
 
 
