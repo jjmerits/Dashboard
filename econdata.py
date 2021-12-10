@@ -14,6 +14,10 @@ import pymongo
 import json
 import requests
 
+from gnews import GNews
+import pandas as pd
+from datetime import datetime
+
 #url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/test_df_all.csv'
 #test_df = pd.read_csv(url)
 
@@ -237,7 +241,18 @@ st.markdown(t.text, unsafe_allow_html=True)
   
 ##########################
 
+google_news = GNews()
+google_news.language = 'english'
+google_news.period = '1d'
+google_news.results = 10000
+df = google_news.get_news('FED')
+df = pd.DataFrame.from_records(df)
 
+df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z'))
+
+df.sort_values('published date', inplace = True, ascending = False)
+df.drop(['description'], axis=1, inplace = True)
+st.writ(df)
 ##########################   
 
 
