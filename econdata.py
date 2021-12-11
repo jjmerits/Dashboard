@@ -16,7 +16,7 @@ import requests
 
 import gnews
 
-from pytz import timezone
+import pytz
 
 #url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/test_df_all.csv'
 #test_df = pd.read_csv(url)
@@ -238,12 +238,12 @@ def tz_diff(date, tz1, tz2):
     return (tz1.localize(date) -
             tz2.localize(date).astimezone(tz1)) \
                .seconds/3600
-est = timezone('US/Eastern')
-seo = timezone('Asia/Seoul')
+est = pytz.timezone('US/Eastern')
+seo = pytz.timezone('Asia/Seoul')
 time_diff = tz_diff(datetime.today().strftime('%Y-%m-%d'), est, seo)
 
-st.header(f'News Flow (TimeZone = US/Eastern) time difference {time_diff}Hour')
-
+st.header('News Flow (TimeZone = US/Eastern)')
+st.write(f'time difference {int(time_diff)}Hour')
 def make_clickable(link):
     # target _blank to open new window
     # extract clickable text to display for your link
