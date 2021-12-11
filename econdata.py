@@ -267,7 +267,7 @@ with col1:
   google_news = gnews.GNews()
   google_news.language = 'english'
   google_news.period = '12h'
-  google_news.results = 10000
+  google_news.results = 50
   df = google_news.get_news('FED')
   df = pd.DataFrame.from_records(df)
   df = df.reset_index().rename({'index':'importance'}, axis = 'columns')
@@ -292,7 +292,7 @@ with col2:
   google_news = gnews.GNews()
   google_news.language = 'english'
   google_news.period = '12h'
-  google_news.results = 10000
+  google_news.results = 50
   df = google_news.get_news('ECB')
   df = pd.DataFrame.from_records(df)
   df = df.reset_index().rename({'index':'importance'}, axis = 'columns')
