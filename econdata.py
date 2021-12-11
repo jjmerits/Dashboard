@@ -260,15 +260,14 @@ def tz_diff(date, tz1, tz2):
     return (tz1.localize(date) -
             tz2.localize(date).astimezone(tz1)) \
                .seconds/3600
-col1, col2 = st.columns(2)
-with col1:
-  st.write("FED")
   
+def gnews_html(str):
+  st.write(str)
   google_news = gnews.GNews()
   google_news.language = 'english'
   google_news.period = '12h'
   google_news.results = 50
-  df = google_news.get_news('FED')
+  df = google_news.get_news(str)
   df = pd.DataFrame.from_records(df)
   df = df.reset_index().rename({'index':'importance'}, axis = 'columns')
   df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z').replace(tzinfo=timezone.utc))
@@ -278,13 +277,15 @@ with col1:
     
   #df.sort_values('date (EST)', inplace = True, ascending = False)
   df.drop(['description','publisher'], axis=1, inplace = True)
-  
   # link is the column with hyperlinks
   df['url'] = df['url'].apply(make_clickable)
   #df.reset_index(drop=True, inplace=True)
   df = df.iloc[0:50,].to_html(escape=False,index=False)
-  
   st.write(df, unsafe_allow_html=True)
+  
+col1, col2 = st.columns(2)
+with col1:
+  gnews_html("FED")
   
 with col2:
   st.write("ECB")
