@@ -262,13 +262,14 @@ def tz_diff(date, tz1, tz2):
             tz2.localize(date).astimezone(tz1)) \
                .seconds/3600
   
-def gnews_html(str):
-  st.write(str)
+def gnews_html(q_str, cn='US'):
+  st.write(q_str)
   google_news = gnews.GNews()
+  google_news.country = cn
   google_news.language = 'english'
   google_news.period = '12h'
   google_news.results = 50
-  df = google_news.get_news(str)
+  df = google_news.get_news(q_str)
   df = pd.DataFrame.from_records(df)
   df = df.reset_index().rename({'index':'importance'}, axis = 'columns')
   df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z').replace(tzinfo=timezone.utc))
@@ -286,17 +287,17 @@ def gnews_html(str):
 ##########################  
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("FED")
+  gnews_html("FED","US")
   
 with col2:
   gnews_html("ECB")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("Bank of England")
+  gnews_html("Bank of England","GB")
   
 with col2:
-  gnews_html("RBA")
+  gnews_html("RBA","AU")
 ##########################
 st.header(" ")
 url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010492021final.HTML'
