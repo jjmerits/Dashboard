@@ -282,8 +282,8 @@ with col1:
   df['url'] = df['url'].apply(make_clickable)
   #df.reset_index(drop=True, inplace=True)
   df = df.to_html(escape=False)
-  #st.markdown(hide_table_row_index, unsafe_allow_html=True)
-  st.dataframe(df)
+  
+  st.markdown(df, unsafe_allow_html=True)
   #st.write(df, unsafe_allow_html=True)
   
 with col2:
