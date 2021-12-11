@@ -227,7 +227,7 @@ with col1:
 
 with col2:
   plot_graph("Consumer Confidence")
-##########################  
+########################## #############################################################
 
 def tz_diff(date, tz1, tz2):
     '''
@@ -282,8 +282,8 @@ with col1:
   df['url'] = df['url'].apply(make_clickable)
   #df.reset_index(drop=True, inplace=True)
   df = df.to_html(escape=False)
-  st.dataframe(df)
-  #st.write(df, unsafe_allow_html=True)
+  #st.dataframe(df)
+  st.write(df, unsafe_allow_html=True)
   
 with col2:
   st.write("ECB")
