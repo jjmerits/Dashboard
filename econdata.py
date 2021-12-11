@@ -301,7 +301,7 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("한국은행","KR","ko")
+  gnews_html("India","IN")
   
 with col2:
   gnews_html("china economy")
