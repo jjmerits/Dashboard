@@ -262,11 +262,11 @@ def tz_diff(date, tz1, tz2):
             tz2.localize(date).astimezone(tz1)) \
                .seconds/3600
   
-def gnews_html(q_str, cn='US'):
+def gnews_html(q_str, cn='US', la='english'):
   st.write(q_str)
   google_news = gnews.GNews()
   google_news.country = cn
-  google_news.language = 'english'
+  google_news.language = la
   google_news.period = '12h'
   google_news.results = 50
   df = google_news.get_news(q_str)
@@ -298,6 +298,13 @@ with col1:
   
 with col2:
   gnews_html("RBA","AU")
+##########################
+col1, col2 = st.columns(2)
+with col1:
+  gnews_html("한국은행","KR","ko")
+  
+with col2:
+  gnews_html("China")
 ##########################
 st.header(" ")
 url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010492021final.HTML'
