@@ -281,10 +281,9 @@ with col1:
   # link is the column with hyperlinks
   df['url'] = df['url'].apply(make_clickable)
   #df.reset_index(drop=True, inplace=True)
-  #df = df.to_html(escape=False)
-  st.dataframe(df)
-  #st.markdown(df, unsafe_allow_html=True)
-  #st.write(df, unsafe_allow_html=True)
+  df = df.to_html(escape=False)
+  
+  st.write(df, unsafe_allow_html=True)
   
 with col2:
   st.write("ECB")
