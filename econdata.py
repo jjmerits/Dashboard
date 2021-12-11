@@ -301,10 +301,10 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("India","IN")
+  gnews_html("Reserve Bank of India","IN")
   
 with col2:
-  gnews_html("china economy")
+  gnews_html("People's Bank of China")
 ##########################
 st.header(" ")
 url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010492021final.HTML'
