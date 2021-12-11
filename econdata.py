@@ -241,9 +241,9 @@ def tz_diff(date, tz1, tz2):
 est = pytz.timezone('US/Eastern')
 seo = pytz.timezone('Asia/Seoul')
 time_diff = tz_diff(datetime.today().strftime('%Y-%m-%d'), est, seo)
-
+est_time = datetime.today().astimezone(seo).astimezone(est).strftime('%d/%m/%y %H:%M:%S')
 st.header('News Flow (TimeZone = US/Eastern)')
-st.write(f'Last updated time (US/EST) {datetime.today().astimezone(seo).astimezone(est).strftime('%d/%m/%y %H:%M:%S')}')
+st.write(f'Last updated time (US/EST) {est_time} time difference:{int(time_diff)}Hour')
 def make_clickable(link):
     # target _blank to open new window
     # extract clickable text to display for your link
