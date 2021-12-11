@@ -244,7 +244,7 @@ with col1:
   df = google_news.get_news('FED')
   df = pd.DataFrame.from_records(df)
   
-  df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z'))
+  df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z').replace(tzinfo=timezone.utc))
   df['published date'] = df['published date'].dt.tz_convert('US/Eastern')
     
   df.sort_values('published date', inplace = True, ascending = False)
@@ -266,7 +266,7 @@ with col2:
   df = google_news.get_news('ECB')
   df = pd.DataFrame.from_records(df)
   
-  df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z'))
+  df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z').replace(tzinfo=timezone.utc))
   df['published date'] = df['published date'].dt.tz_convert('US/Eastern')
   
   df.sort_values('published date', inplace = True, ascending = False)
