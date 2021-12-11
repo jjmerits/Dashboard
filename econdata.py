@@ -245,6 +245,7 @@ est_time = datetime.today().astimezone(seo).astimezone(est).strftime('%d/%m/%y %
 seo_time = datetime.today().astimezone(seo).strftime('%d/%m/%y %H:%M:%S')
 st.header('News Flow (TimeZone = US/Eastern)')
 st.write(f'Last updated time (US/EST): {est_time} / (Asia/Seoul):{seo_time}')
+
 def make_clickable(link):
     # target _blank to open new window
     # extract clickable text to display for your link
@@ -282,35 +283,20 @@ def gnews_html(str):
   #df.reset_index(drop=True, inplace=True)
   df = df.iloc[0:50,].to_html(escape=False,index=False)
   st.write(df, unsafe_allow_html=True)
-  
+##########################  
 col1, col2 = st.columns(2)
 with col1:
   gnews_html("FED")
   
 with col2:
-  st.write("ECB")
+  gnews_html("ECB")
+##########################
+col1, col2 = st.columns(2)
+with col1:
+  gnews_html("BOE")
   
-  google_news = gnews.GNews()
-  google_news.language = 'english'
-  google_news.period = '12h'
-  google_news.results = 50
-  df = google_news.get_news('ECB')
-  df = pd.DataFrame.from_records(df)
-  df = df.reset_index().rename({'index':'importance'}, axis = 'columns')
-  df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z').replace(tzinfo=timezone.utc))
-  df['published date'] = df['published date'].dt.tz_convert('US/Eastern')
-  df['published date'] = df['published date'].apply(lambda x: x.strftime('%d/%m/%y %H:%M:%S'))
-  df.rename(columns={'published date': 'date (EST)'}, inplace = True)
-    
-  #df.sort_values('date (EST)', inplace = True, ascending = False)
-  df.drop(['description','publisher'], axis=1, inplace = True)
-  
-  # link is the column with hyperlinks
-  df['url'] = df['url'].apply(make_clickable)
-  #df.reset_index(drop=True, inplace=True)
-  df = df.iloc[0:50,].to_html(escape=False,index=False)
-  
-  st.write(df, unsafe_allow_html=True)
+with col2:
+  gnews_html("RBA")
 ##########################
 st.header(" ")
 url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010492021final.HTML'
