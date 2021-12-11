@@ -269,21 +269,21 @@ with col1:
   google_news.results = 10000
   df = google_news.get_news('FED')
   df = pd.DataFrame.from_records(df)
-  
+  df = df.reset_index().rename({'index':'importance'}, axis = 'columns')
   df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z').replace(tzinfo=timezone.utc))
   df['published date'] = df['published date'].dt.tz_convert('US/Eastern')
   df['published date'] = df['published date'].apply(lambda x: x.strftime('%d/%m/%y %H:%M:%S'))
   df.rename(columns={'published date': 'date'}, inplace = True)
     
-  df.sort_values('date', inplace = True, ascending = False)
+  #df.sort_values('date', inplace = True, ascending = False)
   df.drop(['description','publisher'], axis=1, inplace = True)
   
   # link is the column with hyperlinks
   df['url'] = df['url'].apply(make_clickable)
   #df.reset_index(drop=True, inplace=True)
   df = df.to_html(escape=False)
-  
-  st.write(df, unsafe_allow_html=True)
+  st.dataframe(df)
+  #st.write(df, unsafe_allow_html=True)
   
 with col2:
   st.write("ECB")
