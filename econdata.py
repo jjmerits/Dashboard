@@ -304,7 +304,7 @@ with col1:
   gnews_html("Reserve Bank of India","IN")
   
 with col2:
-  gnews_html("People's Bank of China")
+  gnews_html("People's Bank of China","HK")
 ##########################
 st.header(" ")
 url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010492021final.HTML'
