@@ -245,7 +245,7 @@ with col1:
   df = pd.DataFrame.from_records(df)
   
   df['published date'] = df['published date'].apply(lambda x: datetime.strptime(x, '%a, %d %b %Y %H:%M:%S %Z'))
-   df['published date'] = df['published date'].dt.tz_convert('US/Eastern')
+  df['published date'] = df['published date'].dt.tz_convert('US/Eastern')
     
   df.sort_values('published date', inplace = True, ascending = False)
   df.drop(['description','publisher'], axis=1, inplace = True)
