@@ -226,13 +226,37 @@ with col1:
 with col2:
   plot_graph("Consumer Confidence")
 ##########################  
-st.header("News Flow (TimeZone = US/Eastern)")
+
+def tz_diff(date, tz1, tz2):
+    '''
+    Returns the difference in hours between timezone1 and timezone2
+    for a given date.
+    '''
+    date = pd.to_datetime(date)
+    return (tz1.localize(date) -
+            tz2.localize(date).astimezone(tz1)) \
+               .seconds/3600
+est = timezone('US/Eastern')
+seo = timezone('Asia/Seoul')
+time_diff = tz_diff(datetime.today().strftime('%Y-%m-%d'), est, seo)
+
+st.header(f'News Flow (TimeZone = US/Eastern) time difference {time_diff}Hour')
+
 def make_clickable(link):
     # target _blank to open new window
     # extract clickable text to display for your link
     text = link.split('=')
     return f'<a target="_blank" href="{link}">{"link"}</a>'
 
+def tz_diff(date, tz1, tz2):
+    '''
+    Returns the difference in hours between timezone1 and timezone2
+    for a given date.
+    '''
+    date = pd.to_datetime(date)
+    return (tz1.localize(date) -
+            tz2.localize(date).astimezone(tz1)) \
+               .seconds/3600
 col1, col2 = st.columns(2)
 with col1:
   st.write("FED")
