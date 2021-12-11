@@ -243,7 +243,7 @@ seo = pytz.timezone('Asia/Seoul')
 time_diff = tz_diff(datetime.today().strftime('%Y-%m-%d'), est, seo)
 
 st.header('News Flow (TimeZone = US/Eastern)')
-st.write(f'time difference {int(time_diff)}Hour')
+st.write(f'Last updated time (US/EST) {datetime.today().astimezone(seo).astimezone(est).strftime('%d/%m/%y %H:%M:%S')}')
 def make_clickable(link):
     # target _blank to open new window
     # extract clickable text to display for your link
