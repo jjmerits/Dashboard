@@ -293,7 +293,7 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("BOE")
+  gnews_html("Bank of England")
   
 with col2:
   gnews_html("RBA")
