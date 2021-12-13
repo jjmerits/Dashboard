@@ -309,8 +309,8 @@ with col2:
 ##########################
 st.header(" ")
 ts = time.time()
-numofweek = str(datetime.datetime.fromtimestamp(ts).isocalendar()[1])
-numofyear = str(datetime.datetime.fromtimestamp(ts).isocalendar()[0])
+numofweek = str(datetime.fromtimestamp(ts).isocalendar()[1])
+numofyear = str(datetime.fromtimestamp(ts).isocalendar()[0])
 url = f'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010{numofweek}{numofyear}final.HTML'
 #with open(url) as f:
 t = requests.get(url,verify=False)
