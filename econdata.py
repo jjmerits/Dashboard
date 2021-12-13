@@ -17,6 +17,7 @@ import requests
 import gnews
 
 import pytz
+import time
 
 #url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/test_df_all.csv'
 #test_df = pd.read_csv(url)
@@ -307,7 +308,10 @@ with col2:
   gnews_html("People's Bank of China","HK")
 ##########################
 st.header(" ")
-url = 'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010492021final.HTML'
+ts = time.time()
+numofweek = str(datetime.datetime.fromtimestamp(ts).isocalendar()[1])
+numofyear = str(datetime.datetime.fromtimestamp(ts).isocalendar()[0])
+url = f'https://raw.githubusercontent.com/jjmerits/Dashboard/main/01010{numofweek}{numofyear}final.HTML'
 #with open(url) as f:
 t = requests.get(url,verify=False)
 st.markdown(t.text, unsafe_allow_html=True)
