@@ -279,7 +279,7 @@ def gnews_html(q_str, cn='US', la='english'):
   df['published date'] = df['published date'].apply(lambda x: x.strftime('%d/%m/%y %H:%M:%S'))
   df.rename(columns={'published date': 'date (EST)'}, inplace = True)
     
-  #df.sort_values('date (EST)', inplace = True, ascending = False)
+  df.sort_values('date (EST)', inplace = True, ascending = False)
   df.drop(['description','publisher'], axis=1, inplace = True)
   # link is the column with hyperlinks
   df['url'] = df['url'].apply(make_clickable)
