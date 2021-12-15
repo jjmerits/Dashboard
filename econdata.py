@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -317,10 +318,12 @@ t = requests.get(url,verify=False)
 st.markdown(t.text, unsafe_allow_html=True)
   
 ##########################
-st.header("단일판매공급 공시 기반 상장사 매출처 네트워크 도표")
+st.write("단일판매공급 공시 기반 상장사 매출처 네트워크 도표")
 url = f'https://raw.githubusercontent.com/jjmerits/Dashboard/main/krx1000by1800_1.html'
-t = requests.get(url,verify=False)
-st.markdown(t.text, unsafe_allow_html=True)
+HtmliFile = open("url", r , encoding = 'utf-8')
+source_code = HtmliFile.read()
+components.html(source_code)
+
 #########################
 
 
