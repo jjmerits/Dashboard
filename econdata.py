@@ -289,24 +289,24 @@ def gnews_html(q_str, cn='US', la='english'):
 ##########################  
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("FED","US")
+  gnews_html("Dollar Index","US")
   
 with col2:
-  gnews_html("ECB")
+  gnews_html("EUR")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("Bank of England","GB")
+  gnews_html("GBP","GB")
   
 with col2:
-  gnews_html("RBA","AU")
+  gnews_html("AUD","AU")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("Reserve Bank of India","IN")
+  gnews_html("IDR","IN")
   
 with col2:
-  gnews_html("People's Bank of China","HK")
+  gnews_html("CNY","HK")
 ##########################
 st.header(" ")
 ts = time.time()
