@@ -303,10 +303,10 @@ with col2:
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("Idia Rupee","IN")
+  gnews_html("Idian Rupee","IN")
   
 with col2:
-  gnews_html("China Yuan","HK")
+  gnews_html("Chinise Yuan","HK")
 ##########################
 st.header(" ")
 ts = time.time()
