@@ -292,21 +292,21 @@ with col1:
   gnews_html("Dollar Index","US")
   
 with col2:
-  gnews_html("EUR")
+  gnews_html("EUR currency")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
   gnews_html("GBP","GB")
   
 with col2:
-  gnews_html("AUD","AU")
+  gnews_html("AUD currency","AU")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("IDR","IN")
+  gnews_html("Idia Rupee","IN")
   
 with col2:
-  gnews_html("CNY","HK")
+  gnews_html("China Yuan","HK")
 ##########################
 st.header(" ")
 ts = time.time()
