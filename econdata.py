@@ -289,25 +289,19 @@ def gnews_html(q_str, cn='US', la='english'):
 ##########################  
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("Dollar Index","US")
+  gnews_html("Dollar Index ~market","US")
   
 with col2:
-  gnews_html("EUR currency")
+  gnews_html("FOMC ~market")
 ##########################
 col1, col2 = st.columns(2)
 with col1:
-  gnews_html("GBP","GB")
+  gnews_html("Chinese Yuan ~market","HK")
   
 with col2:
-  gnews_html("AUD currency","AU")
+  gnews_html("AUD currency ~market","AU")
 ##########################
-col1, col2 = st.columns(2)
-with col1:
-  gnews_html("Idian Rupee","IN")
-  
-with col2:
-  gnews_html("Chinese Yuan","HK")
-##########################
+
 st.header(" ")
 ts = time.time()
 numofweek = str(datetime.fromtimestamp(ts).isocalendar()[1])
