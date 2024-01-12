@@ -1,56 +1,56 @@
-IN,Ticker,NAME,CLASSIFICATION_DESCRIPTION,Qty,Value,RETURN,Last Updated: 2024-01-12 15:31:20
+IN,Ticker,NAME,CLASSIFICATION_DESCRIPTION,Qty,Value,RETURN,Last Updated: 2024-01-12 15:36:50
 1,NKY Index,NIKKEI 225,,,0,,
-1,7261 JP Equity,MAZDA MOTOR CORP,Automobiles,"4,000","60,675,893",8.59%,"6,173,292"
-,9104 JP Equity,MITSUI OSK LINES LTD,Dry Bulk Shipping,"1,200","52,218,063",-2.17%,0
-,9101 JP Equity,NIPPON YUSEN KK,Marine Shipping,"1,200","50,840,162",-1.49%,0
-,9107 JP Equity,KAWASAKI KISEN KAISHA LTD,Marine Shipping,"1,000","57,968,429",-1.62%,0
-1,8002 JP Equity,MARUBENI CORP,Food & Beverage Wholesalers,"3,000","66,115,364",7.74%,"6,779,799"
-1,2768 JP Equity,SOJITZ CORP,Plastic Matl & Forms Whslrs,"2,000","60,693,994",4.30%,"6,429,190"
-1,6201 JP Equity,TOYOTA INDUSTRIES CORP,Auto Parts,500,"55,593,925",4.49%,"5,878,500"
-,5406 JP Equity,KOBE STEEL LTD,Steel Producers,"3,000","51,827,049",2.36%,0
-1,5411 JP Equity,JFE HOLDINGS INC,Steel Producers,"3,000","62,314,070",2.77%,"6,698,961"
-1,6701 JP Equity,NEC CORP,IT Services - Commercial,800,"63,861,739",4.31%,"6,763,950"
-1,8001 JP Equity,ITOCHU CORP,Food & Beverage Wholesalers,"1,000","59,182,527",12.82%,"5,795,280"
-,4755 JP Equity,RAKUTEN GROUP INC,Online Marketplace,"10,000","58,272,237",1.05%,0
-1,3092 JP Equity,ZOZO INC,Apparel & Footwear - Online,"2,000","59,553,606",1.19%,"6,502,740"
-1,7270 JP Equity,SUBARU CORP,Automobiles,"2,000","51,598,041",2.53%,"5,560,140"
-1,8473 JP Equity,SBI HOLDINGS INC,Institutional Brokerage,"2,000","62,160,208",4.11%,"6,596,920"
-1,8601 JP Equity,DAIWA SECURITIES GROUP INC,Institutional Brokerage,"6,000","54,820,090",1.33%,"5,977,668"
-1,8802 JP Equity,MITSUBISHI ESTATE CO LTD,Office Owners & Developers,"3,000","57,738,941",5.79%,"6,030,294"
-1,1925 JP Equity,DAIWA HOUSE INDUSTRY CO LTD,Homebuilding,"1,500","61,811,756",2.98%,"6,631,451"
-1,5020 JP Equity,ENEOS HOLDINGS INC,Refining & Marketing,"10,000","54,657,177",0.86%,"5,987,580"
-1,7309 JP Equity,SHIMANO INC,Bicycle Parts,300,"61,635,267",0.54%,"6,773,500"
-1,4543 JP Equity,TERUMO CORP,Interventional Cardiology,"1,400","64,203,856",4.92%,"6,760,991"
-1,7733 JP Equity,OLYMPUS CORP,Surgical & Medical Instruments,"3,200","64,194,805",7.06%,"6,624,550"
-1,4901 JP Equity,FUJIFILM HOLDINGS CORP,Medical Equipment,800,"66,866,572",6.92%,"6,909,260"
-1,4519 JP Equity,CHUGAI PHARMACEUTICAL CO LTD,Large Pharma,"1,200","63,937,765",5.55%,"6,692,640"
-1,2160 JP Equity,GNI GROUP LTD,Specialty Pharma,"2,300","64,011,076",3.16%,"6,855,580"
-1,3563 JP Equity,FOOD & LIFE COMPANIES LTD,Casual Restaurants,"2,300","61,502,674",-0.25%,"6,812,350"
-1,6273 JP Equity,SMC CORP,Relay & Industrial Control,100,"76,342,655",8.46%,"7,776,300"
-1,7974 JP Equity,NINTENDO CO LTD,Video Game Equipment,900,"66,183,244",9.09%,"6,702,600"
-1,9501 JP Equity,TOKYO ELECTRIC POWER COMPANY,Integrated Electric Utilities,"8,500","61,052,402",2.63%,"6,572,325"
-1,6988 JP Equity,NITTO DENKO CORP,Specialty Chemicals,600,"60,875,008",3.93%,"6,471,500"
-1,7267 JP Equity,HONDA MOTOR CO LTD,Automobiles,"4,300","60,848,309",2.04%,"6,588,750"
-1,7201 JP Equity,NISSAN MOTOR CO LTD,Automobiles,"11,000","56,917,137",1.10%,"6,220,360"
-1,4568 JP Equity,DAIICHI SANKYO CO LTD,Large Pharma,"1,500","61,295,866",6.41%,"6,364,100"
-1,3132 JP Equity,MACNICA HOLDINGS INC,Technology Distributors,800,"58,684,739",6.76%,"6,073,170"
-1,6981 JP Equity,MURATA MANUFACTURING CO LTD,Electronics Components,"2,200","59,306,522",0.12%,"6,545,051"
-1,4704 JP Equity,TREND MICRO INC,Security Software,800,"61,037,921",3.14%,"6,538,600"
-1,7751 JP Equity,CANON INC,"Printers, Copiers & Scanners","1,700","57,944,392",0.11%,"6,395,300"
-1,7202 JP Equity,ISUZU MOTORS LTD,Commercial Vehicles Mfg,"3,300","59,226,876",0.18%,"6,532,291"
-1,7741 JP Equity,HOYA CORP,Ophthalmic Goods,400,"65,472,764",-0.66%,"7,281,800"
-1,4543 JP Equity,TERUMO CORP,Interventional Cardiology,"1,300","59,617,866",1.00%,"6,522,070"
-1,3436 JP Equity,SUMCO CORP,Silicon Products,"3,000","61,988,244",2.35%,"6,691,840"
-1,6762 JP Equity,TDK CORP,Electronics Batteries,900,"57,573,313",1.37%,"6,275,100"
-1,8031 JP Equity,MITSUI & CO LTD,Metal Svc Centers & Processors,"1,100","57,912,714",0.41%,"6,372,300"
-1,9983 JP Equity,FAST RETAILING CO LTD,Family Clothing Stores,200,"70,486,852",0.96%,"7,714,000"
-1,6417 JP Equity,SANKYO CO LTD,Gaming Equipment,700,"56,145,112",-0.42%,"6,229,800"
-1,1911 JP Equity,SUMITOMO FORESTRY CO LTD,Homebuilding,"1,400","57,019,410",1.72%,"6,193,600"
-1,8830 JP Equity,SUMITOMO REALTY & DEVELOPMEN,Multi Asset Class Own & Develop,"1,400","57,222,146",0.08%,"6,317,270"
-1,8035 JP Equity,TOKYO ELECTRON LTD,Front End Capital Equipment,300,"71,274,263",0.48%,"7,837,450"
-1,6146 JP Equity,DISCO CORP,Semiconductor Mfg,200,"65,780,488",-0.07%,"7,272,900"
+1,7261 JP Equity,MAZDA MOTOR CORP,Automobiles,"4,000","60,698,686",8.59%,
+,9104 JP Equity,MITSUI OSK LINES LTD,Dry Bulk Shipping,"1,200","52,218,063",-2.17%,
+,9101 JP Equity,NIPPON YUSEN KK,Marine Shipping,"1,200","50,840,162",-1.49%,
+,9107 JP Equity,KAWASAKI KISEN KAISHA LTD,Marine Shipping,"1,000","57,968,429",-1.62%,
+1,8002 JP Equity,MARUBENI CORP,Food & Beverage Wholesalers,"3,000","66,140,201",7.74%,
+1,2768 JP Equity,SOJITZ CORP,Plastic Matl & Forms Whslrs,"2,000","60,716,795",4.30%,
+1,6201 JP Equity,TOYOTA INDUSTRIES CORP,Auto Parts,500,"55,614,809",4.49%,
+,5406 JP Equity,KOBE STEEL LTD,Steel Producers,"3,000","51,827,049",2.36%,
+1,5411 JP Equity,JFE HOLDINGS INC,Steel Producers,"3,000","62,337,479",2.77%,
+1,6701 JP Equity,NEC CORP,IT Services - Commercial,800,"63,885,730",4.31%,
+1,8001 JP Equity,ITOCHU CORP,Food & Beverage Wholesalers,"1,000","59,204,760",12.82%,
+,4755 JP Equity,RAKUTEN GROUP INC,Online Marketplace,"10,000","58,272,237",1.05%,
+1,3092 JP Equity,ZOZO INC,Apparel & Footwear - Online,"2,000","59,575,978",1.19%,
+1,7270 JP Equity,SUBARU CORP,Automobiles,"2,000","51,617,424",2.53%,
+1,8473 JP Equity,SBI HOLDINGS INC,Institutional Brokerage,"2,000","62,183,559",4.11%,
+1,8601 JP Equity,DAIWA SECURITIES GROUP INC,Institutional Brokerage,"6,000","54,840,684",1.33%,
+1,8802 JP Equity,MITSUBISHI ESTATE CO LTD,Office Owners & Developers,"3,000","57,760,631",5.79%,
+1,1925 JP Equity,DAIWA HOUSE INDUSTRY CO LTD,Homebuilding,"1,500","61,834,976",2.98%,
+1,5020 JP Equity,ENEOS HOLDINGS INC,Refining & Marketing,"10,000","54,677,710",0.86%,
+1,7309 JP Equity,SHIMANO INC,Bicycle Parts,300,"61,658,421",0.54%,
+1,4543 JP Equity,TERUMO CORP,Interventional Cardiology,"1,400","64,227,975",4.92%,
+1,7733 JP Equity,OLYMPUS CORP,Surgical & Medical Instruments,"3,200","64,218,920",7.06%,
+1,4901 JP Equity,FUJIFILM HOLDINGS CORP,Medical Equipment,800,"66,891,691",6.92%,
+1,4519 JP Equity,CHUGAI PHARMACEUTICAL CO LTD,Large Pharma,"1,200","63,961,784",5.55%,
+1,2160 JP Equity,GNI GROUP LTD,Specialty Pharma,"2,300","64,035,122",3.16%,
+1,3563 JP Equity,FOOD & LIFE COMPANIES LTD,Casual Restaurants,"2,300","61,525,778",-0.25%,
+1,6273 JP Equity,SMC CORP,Relay & Industrial Control,100,"76,371,334",8.46%,
+1,7974 JP Equity,NINTENDO CO LTD,Video Game Equipment,900,"66,208,106",9.09%,
+1,9501 JP Equity,TOKYO ELECTRIC POWER COMPANY,Integrated Electric Utilities,"8,500","61,075,337",2.63%,
+1,6988 JP Equity,NITTO DENKO CORP,Specialty Chemicals,600,"60,897,877",3.93%,
+1,7267 JP Equity,HONDA MOTOR CO LTD,Automobiles,"4,300","60,871,167",2.04%,
+1,7201 JP Equity,NISSAN MOTOR CO LTD,Automobiles,"11,000","56,938,519",1.10%,
+1,4568 JP Equity,DAIICHI SANKYO CO LTD,Large Pharma,"1,500","61,318,892",6.41%,
+1,3132 JP Equity,MACNICA HOLDINGS INC,Technology Distributors,800,"58,706,784",6.76%,
+1,6981 JP Equity,MURATA MANUFACTURING CO LTD,Electronics Components,"2,200","59,328,801",0.12%,
+1,4704 JP Equity,TREND MICRO INC,Security Software,800,"61,060,850",3.14%,
+1,7751 JP Equity,CANON INC,"Printers, Copiers & Scanners","1,700","57,966,159",0.11%,
+1,7202 JP Equity,ISUZU MOTORS LTD,Commercial Vehicles Mfg,"3,300","59,249,125",0.18%,
+1,7741 JP Equity,HOYA CORP,Ophthalmic Goods,400,"65,497,359",-0.66%,
+1,4543 JP Equity,TERUMO CORP,Interventional Cardiology,"1,300","59,640,262",1.00%,
+1,3436 JP Equity,SUMCO CORP,Silicon Products,"3,000","62,011,531",2.35%,
+1,6762 JP Equity,TDK CORP,Electronics Batteries,900,"57,594,941",1.37%,
+1,8031 JP Equity,MITSUI & CO LTD,Metal Svc Centers & Processors,"1,100","57,934,470",0.41%,
+1,9983 JP Equity,FAST RETAILING CO LTD,Family Clothing Stores,200,"70,513,331",0.96%,
+1,6417 JP Equity,SANKYO CO LTD,Gaming Equipment,700,"56,166,204",-0.42%,
+1,1911 JP Equity,SUMITOMO FORESTRY CO LTD,Homebuilding,"1,400","57,040,830",1.72%,
+1,8830 JP Equity,SUMITOMO REALTY & DEVELOPMEN,Multi Asset Class Own & Develop,"1,400","57,243,642",0.08%,
+1,8035 JP Equity,TOKYO ELECTRON LTD,Front End Capital Equipment,300,"71,301,038",0.48%,
+1,6146 JP Equity,DISCO CORP,Semiconductor Mfg,200,"65,805,199",-0.07%,
 ,,,,,,,
-,,,,JP,"2,697,337,583",3.08%,
+,,,,JP,"2,698,350,869",3.08%,"83,074,580"
 ,,,,,,,
 1,KOSDQ150 Index,KOSDAQ 150 Index,,,0,,
 1,KOSPI2 Index,KOSPI 200 INDEX,,,0,,
@@ -113,33 +113,33 @@ IN,Ticker,NAME,CLASSIFICATION_DESCRIPTION,Qty,Value,RETURN,Last Updated: 2024-01
 ,3324 TT Equity,AURAS TECHNOLOGY CO LTD,Personal Computers,"4,000","57,361,856",-3.81%,
 ,3008 TT Equity,LARGAN PRECISION CO LTD,Optical Instruments & Lens,"1,000","116,237,275",-4.51%,
 ,3406 TT Equity,GENIUS ELECTRONIC OPTICAL CO,Optical Instruments & Lens,"3,000","51,167,209",-3.94%,
-1,9958 TT Equity,CENTURY IRON & STEEL INDUS,Prefabricated Metal,"7,000","55,849,784",4.97%,
-1,6223 TT Equity,MPI CORP,Front End Capital Equipment,"6,000","63,701,681",10.01%,
+1,9958 TT Equity,CENTURY IRON & STEEL INDUS,Prefabricated Metal,"7,000","55,848,857",4.97%,
+1,6223 TT Equity,MPI CORP,Front End Capital Equipment,"6,000","63,700,624",10.01%,
 ,3363 TT Equity,FOCI FIBER OPTIC COMMUNICATI,Electronic Connectors,"20,000","56,075,307",-6.13%,
 ,2363 TT Equity,SILICON INTEGRATED SYSTEMS,Semiconductor Devices,"30,000","52,482,463",-8.77%,
-1,6472 TT Equity,BORA PHARMACEUTICALS CO LTD,Specialty Pharma,"2,000","56,314,143",1.67%,
-1,1477 TT Equity,MAKALOT INDUSTRIAL CO LTD,Garment Outsourcing,"4,000","63,912,753",8.41%,
-1,3035 TT Equity,FARADAY TECHNOLOGY CORP,Analog ICs,"4,000","71,173,647",14.61%,
-1,3217 TT Equity,ARGOSY RESEARCH INC,Computer Hardware & Storage,"7,000","49,201,000",-8.47%,
+1,6472 TT Equity,BORA PHARMACEUTICALS CO LTD,Specialty Pharma,"2,000","56,313,209",1.67%,
+1,1477 TT Equity,MAKALOT INDUSTRIAL CO LTD,Garment Outsourcing,"4,000","63,911,693",8.41%,
+1,3035 TT Equity,FARADAY TECHNOLOGY CORP,Analog ICs,"4,000","71,172,467",14.61%,
+1,3217 TT Equity,ARGOSY RESEARCH INC,Computer Hardware & Storage,"7,000","49,200,184",-8.47%,
 ,6274 TT Equity,TAIWAN UNION TECHNOLOGY CORP,PCBs,"10,000","50,364,396",-5.92%,
-1,6187 TT Equity,ALL RING TECH CO LTD,Ind Process Automation Mach,"10,000","62,688,533",4.99%,
+1,6187 TT Equity,ALL RING TECH CO LTD,Ind Process Automation Mach,"10,000","62,687,493",4.99%,
 ,2388 TT Equity,VIA TECHNOLOGIES INC,App Specific I/O & Storage,"8,000","52,175,510",-7.49%,
-1,3293 TT Equity,INTERNATIONAL GAMES SYSTEM C,Console & PC Games,"2,000","64,757,043",-0.58%,
-1,6451 TT Equity,SHUNSIN TECHNOLOGY HOLDINGS,Semiconductor Mfg,"9,000","71,616,899",19.57%,
-1,3032 TT Equity,COMPUCASE ENTERPRISE,Electronics Components,"18,000","57,521,478",-2.99%,
-1,3661 TT Equity,ALCHIP TECHNOLOGIES LTD,Analog ICs,"1,000","157,671,158",4.60%,
-1,3529 TT Equity,EMEMORY TECHNOLOGY INC,Intellectual Property - Semi,"1,000","109,757,700",0.77%,
-1,8227 TT Equity,PROGATE GROUP CORPORATION,Semiconductor Devices,"5,000","68,493,026",10.06%,
-1,3443 TT Equity,GLOBAL UNICHIP CORP,Silicon Products,800,"61,126,596",1.39%,
-1,1560 TT Equity,KINIK COMPANY,Abrasive Products,"7,000","56,293,036",0.56%,
-1,3036 TT Equity,WT MICROELECTRONICS CO LTD,EMS/ODM,"11,000","59,205,836",0.00%,
-1,3363 TT Equity,FOCI FIBER OPTIC COMMUNICATI,Electronic Connectors,"20,000","57,833,865",-2.18%,
-1,3548 TT Equity,JARLLYTEC CO LTD,Displays,"7,000","64,123,826",3.49%,
-1,2474 TT Equity,CATCHER TECHNOLOGY CO LTD,Powder Metallurgy Parts,"7,000","58,509,297",0.00%,
-1,2329 TT Equity,ORIENT SEMICONDUCTOR ELECTR,Semiconductor Devices,"24,000","58,154,695",-1.27%,
-1,6531 TT Equity,AP MEMORY TECHNOLOGY CORP,Memory ICs,"3,000","65,094,759",-1.15%,
-1,1519 TT Equity,FORTUNE ELECTRIC CO LTD,Electronic Coil,"4,000","62,477,460",1.60%,
+1,3293 TT Equity,INTERNATIONAL GAMES SYSTEM C,Console & PC Games,"2,000","64,755,969",-0.58%,
+1,6451 TT Equity,SHUNSIN TECHNOLOGY HOLDINGS,Semiconductor Mfg,"9,000","71,615,712",19.57%,
+1,3032 TT Equity,COMPUCASE ENTERPRISE,Electronics Components,"18,000","57,520,524",-2.99%,
+1,3661 TT Equity,ALCHIP TECHNOLOGIES LTD,Analog ICs,"1,000","157,668,543",4.60%,
+1,3529 TT Equity,EMEMORY TECHNOLOGY INC,Intellectual Property - Semi,"1,000","109,755,880",0.77%,
+1,8227 TT Equity,PROGATE GROUP CORPORATION,Semiconductor Devices,"5,000","68,491,891",10.06%,
+1,3443 TT Equity,GLOBAL UNICHIP CORP,Silicon Products,800,"61,125,582",1.39%,
+1,1560 TT Equity,KINIK COMPANY,Abrasive Products,"7,000","56,292,102",0.56%,
+1,3036 TT Equity,WT MICROELECTRONICS CO LTD,EMS/ODM,"11,000","59,204,855",0.00%,
+1,3363 TT Equity,FOCI FIBER OPTIC COMMUNICATI,Electronic Connectors,"20,000","57,832,906",-2.18%,
+1,3548 TT Equity,JARLLYTEC CO LTD,Displays,"7,000","64,122,762",3.49%,
+1,2474 TT Equity,CATCHER TECHNOLOGY CO LTD,Powder Metallurgy Parts,"7,000","58,508,327",0.00%,
+1,2329 TT Equity,ORIENT SEMICONDUCTOR ELECTR,Semiconductor Devices,"24,000","58,153,731",-1.27%,
+1,6531 TT Equity,AP MEMORY TECHNOLOGY CORP,Memory ICs,"3,000","65,093,680",-1.15%,
+1,1519 TT Equity,FORTUNE ELECTRIC CO LTD,Electronic Coil,"4,000","62,476,424",1.60%,
 ,,,,,,,
-,,,,TW,"1,495,478,213",1.41%,"21,024,048"
+,,,,TW,"1,495,453,415",1.41%,"21,023,699"
 ,,,,,,,
-,,,,SUM,"5,349,873,795",3.26%,"174,277,076"
+,,,,SUM,"5,350,862,283",3.26%,"174,307,923"
